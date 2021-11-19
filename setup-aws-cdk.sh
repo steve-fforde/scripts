@@ -1,12 +1,14 @@
 #!/bin/sh
 
-source ./utilities.sh
+source <(curl "https://raw.githubusercontent.com/steve-fforde/scripts/main/utilities.sh")
 
-# clear
+clear
 echo ""
 echo "Setting up AWS Cloud Development Kit"
 echo "===================================="
 echo ""
+
+
 region=$(askWithDefault "Enter your region" "eu-west-2")
 
 

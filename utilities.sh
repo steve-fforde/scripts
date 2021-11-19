@@ -8,3 +8,11 @@ function askWithDefault {
 
   echo "$temp"
 }
+
+function h1 {
+  clear
+  echo ""
+  echo $1
+  echo $1 | sed 's/./=/gi'
+  echo ""
+}
