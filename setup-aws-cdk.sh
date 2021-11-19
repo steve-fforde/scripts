@@ -1,2 +1,7 @@
+#!/bin/sh
+
 clear
-echo "Setting up"
+echo "Setting up Cloud Development Kit"
+echo $1
+
+echo ""
