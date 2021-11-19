@@ -1,7 +1,12 @@
 #!/bin/sh
 
 clear
-echo "Setting up Cloud Development Kit"
-echo $1
+echo "Setting up AWS Cloud Development Kit"
+echo "===================================="
+echo ""
+read -p "Enter your region (eu-west-2): " region
+
+echo ""
+echo "$region "
 
 echo ""
