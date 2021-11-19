@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 clear
 echo "Setting up AWS Cloud Development Kit"
