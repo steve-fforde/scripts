@@ -1,6 +1,7 @@
 #!/bin/bash
 
 clear
+echo ""
 echo "Setting up AWS Cloud Development Kit"
 echo "===================================="
 echo ""
