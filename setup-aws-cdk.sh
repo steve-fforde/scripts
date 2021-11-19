@@ -1,15 +1,11 @@
 #!/bin/sh
 
-source <(curl "https://raw.githubusercontent.com/steve-fforde/scripts/main/utilities.sh")
+source <(curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/utilities.sh")
 
-clear
-echo ""
-echo "Setting up AWS Cloud Development Kit"
-echo "===================================="
-echo ""
-
+h1 "Setting up AWS Cloud Development Kit"
 
 region=$(askWithDefault "Enter your region" "eu-west-2")
+adfs_host=$(ask "Enter your ADFS Host")
 
 
 echo ""

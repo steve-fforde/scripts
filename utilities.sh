@@ -1,7 +1,12 @@
 #!/bin/bash
 
+function ask {
+  read -p "$1: " temp < /dev/tty
+  echo "$temp"  
+}
+
 function askWithDefault {
-  read -p "$1 ($2): " temp < /dev/tty
+  temp=$(ask "$1 ($2): ")
   if [ "$temp" == "" ]; then
     temp="eu-west-2"
   fi
