@@ -10,4 +10,4 @@ read -p "Enter your region (eu-west-2): " region < /dev/tty
 echo ""
 echo "$region "
 
-echo "z"
+echo "x"
