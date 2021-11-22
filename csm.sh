@@ -17,7 +17,7 @@ fi
   code=$(curl -s -o /dev/null -w "%{http_code}" "https://raw.githubusercontent.com/steve-fforde/scripts/main/src/$1.sh")
   if (( $code >= 200 && $code < 300 )); then
     curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/src/$1.sh" -o /tmp/$1.sh
-    __CSM_START_DIR=$(PWD)
+    __CSM_START_DIR=$(pwd)
     CSM_REMOTE="https://raw.githubusercontent.com/steve-fforde/scripts/main/"
     CSM_NAME="$1"
     export CSM_REMOTE
