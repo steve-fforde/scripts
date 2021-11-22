@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if [ "$1" = "--help" ]; then
   echo "usage: csm  [--help] <command> [<args>]
 
@@ -10,9 +12,9 @@ For use on AWS boxes:
 fi
 
 (
-  code=$(curl -s -o /dev/null -w "%{http_code}" "https://raw.githubusercontent.com/steve-fforde/scripts/main/$1.sh")
+  code=$(curl -s -o /dev/null -w "%{http_code}" "https://raw.githubusercontent.com/steve-fforde/scripts/main/scripts/$1.sh")
   if [ code = 200 ]; then
-    curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/$1.sh" -o /tmp/$1.sh
+    curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/scripts/$1.sh" -o /tmp/$1.sh
     bash /tmp/$1.sh ${@:2} 
   else
     echo "csm: '$1' is not a csm command. See 'csm --help'."
