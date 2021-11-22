@@ -28,13 +28,15 @@ fi
     # backup the path so we can restore it.
     __CSM_START_DIR=$(pwd)
     # set common variables
-    CSM_START_DIR=$(pwd)
-    CSM_REMOTE="https://raw.githubusercontent.com/steve-fforde/scripts/main/"
     CSM_NAME="$1"
+    CSM_SRC_DIR="https://raw.githubusercontent.com/steve-fforde/scripts/main/src"
+    CSM_START_DIR=$(pwd)
+    CSM_UTILS="https://raw.githubusercontent.com/steve-fforde/scripts/main/utilities.sh"
     # export varibles for use in called script
-    export CSM_START_DIR
-    export CSM_REMOTE
     export CSM_NAME
+    export CSM_SRC_DIR
+    export CSM_START_DIR
+    export CSM_UTILS
     # call the copied script
     bash /tmp/$1.sh ${@:2}
     # revert back to calling directory

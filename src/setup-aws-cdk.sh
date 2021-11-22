@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source <(curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/utilities.sh")
+source <(curl -s "$CSM_UTILS")
 
 #h1 "Setting up AWS Cloud Development Kit"
 
