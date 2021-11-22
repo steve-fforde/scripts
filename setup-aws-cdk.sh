@@ -8,10 +8,24 @@ source <(curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/ut
 #adfs_host=$(ask "Enter your ADFS Host")
 
 
+while getopts a:b: flag
+do
+    case "${flag}" in
+        a) echo " .... ${OPTARG} ....";;
+        b) echo " ,,,, ${OPTARG} ,,,,";;
+    esac
+done
+
+
 echo ""
+echo " ++++ $region ++++"
+echo " ~~~~ $# ~~~~"
 echo " ++++ $region ++++"
 echo " ~~~~ $@ ~~~~"
 echo " ++++ $region ++++"
+echo " ~~~~ ${@:2} ~~~~"
+echo " ++++ $region ++++"
+echo " ~~~~ $@ ~~~~"
 echo " ++++ $region ++++"
 
 echo "x"
