@@ -1,5 +1,7 @@
 #!/bin/bash
 
+curl -s "$CSM_UTILS"
+
 source <(curl -s "$CSM_UTILS")
 
 h1 "Setting up AWS Cloud Development Kit"
