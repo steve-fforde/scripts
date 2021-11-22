@@ -5,7 +5,7 @@ These are common CSM commands used in various situations:
 
 For use on AWS boxes:
    setup-aws-cdk      Install CDK on an EC2 box."
-   
+
   exit 0
 fi
 
@@ -16,5 +16,6 @@ fi
     bash /tmp/$1.sh ${@:2} 
   else
     echo "csm: '$1' is not a csm command. See 'csm --help'."
+  fi
 )
 rm -f /tmp/$1.sh
