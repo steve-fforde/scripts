@@ -1,3 +1,5 @@
+echo "Chayote Script Manager"
+
 if [ "$1" = "--help" ]; then
   echo "csm setup-aws-cdk"
 fi
