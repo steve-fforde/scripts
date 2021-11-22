@@ -31,7 +31,7 @@ fi
     CSM_NAME="$1"
     CSM_SRC_DIR="https://raw.githubusercontent.com/steve-fforde/scripts/main/src"
     CSM_START_DIR=$(pwd)
-    CSM_UTILS="https://raw.githubusercontent.com/steve-fforde/scripts/main/utilities.sh"
+    CSM_UTILS="https://raw.githubusercontent.com/steve-fforde/scripts/main/lib/utilities.sh"
     # export varibles for use in called script
     export CSM_NAME
     export CSM_SRC_DIR
