@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function head {
+function heading {
   clear
   echo ""
   echo $1
