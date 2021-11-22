@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 source <(curl -s "$CSM_UTILS")
 
-#h1 "Setting up AWS Cloud Development Kit"
+h1 "Setting up AWS Cloud Development Kit"
 
 #region=$(askWithDefault "Enter your region" "$(curl -s http://169.254.169.254/latest/dynamic/instance-identity/document | python3 -c 'import sys, json; print(json.load(sys.stdin)["region"])')")
 #adfs_host=$(ask "Enter your ADFS Host")
