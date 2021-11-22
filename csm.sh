@@ -13,9 +13,11 @@ For use on AWS boxes:
 fi
 
 (
-  code=$(curl -s -o /dev/null -w "%{http_code}" "https://raw.githubusercontent.com/steve-fforde/scripts/main/scripts/$1.sh")
-  if [ code -eq 200 ]; then
-    curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/scripts/$1.sh" -o /tmp/$1.sh
+  code=$(curl -s -o /dev/null -w "%{http_code}" "https://raw.githubusercontent.com/steve-fforde/scripts/main/src/$1.sh")
+  if (( $code >= 200 && $code < 300 )); then
+    curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/src/$1.sh" -o /tmp/$1.sh
+    CSM_REMOTE="https://raw.githubusercontent.com/steve-fforde/scripts/main/"
+    CSM_NAME="$1"
     bash /tmp/$1.sh ${@:2} 
   else
     echo "csm: ${code}: '$1' is not a csm command. See 'csm --help'."
