@@ -9,9 +9,9 @@ These are common CSM commands used in various situations:
 
 For use on AWS boxes:
    setup-aws-cdk      Install CDK on an EC2 box.
-   
+
 Fo use inside a GIT project:
-   git-open           Opens the git project in the defauklt browser
+   git-web            Opens the git project in the defauklt browser
 "
 
   exit 0
