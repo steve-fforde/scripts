@@ -18,6 +18,7 @@ fi
     bash /tmp/$1.sh ${@:2} 
   else
     echo "csm: '$1' is not a csm command. See 'csm --help'."
+    exit code
   fi
 )
 rm -f /tmp/$1.sh
