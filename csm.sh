@@ -1,7 +1,8 @@
 #!/bin/sh
 
 if [ "$1" = "--help" ]; then
-  echo "usage: csm  [--help] <command> [<args>]
+  echo "usage: csm [--help] 
+           <command> [<args>]
 
 These are common CSM commands used in various situations:
 
