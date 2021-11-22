@@ -13,7 +13,7 @@ fi
 
 (
   code=$(curl -s -o /dev/null -w "%{http_code}" "https://raw.githubusercontent.com/steve-fforde/scripts/main/scripts/$1.sh")
-  if [ code = 200 ]; then
+  if [ code -eq 200 ]; then
     curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/scripts/$1.sh" -o /tmp/$1.sh
     bash /tmp/$1.sh ${@:2} 
   else
