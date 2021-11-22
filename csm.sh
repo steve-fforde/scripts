@@ -11,7 +11,7 @@ For use on AWS boxes:
    setup-aws-cdk      Install CDK on an EC2 box.
 
 Fo use inside a GIT project:
-   git-web            Opens the git project in the defauklt browser
+   git-open           Opens the git project in the defauklt browser
 "
 
   exit 0
