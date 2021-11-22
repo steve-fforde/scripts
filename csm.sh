@@ -38,6 +38,8 @@ fi
     export CSM_START_DIR
     export CSM_UTILS
     # call the copied script
+    curl -s "$CSM_UTILS"
+    source <(curl -s "$CSM_UTILS")
     bash /tmp/$1.sh ${@:2}
     # revert back to calling directory
     cd $__CSM_START_DIR
