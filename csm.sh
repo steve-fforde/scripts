@@ -17,8 +17,7 @@ fi
     curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/scripts/$1.sh" -o /tmp/$1.sh
     bash /tmp/$1.sh ${@:2} 
   else
-    echo "csm: '$1' is not a csm command. See 'csm --help'."
-    exit code
+    echo "csm: ${code}: '$1' is not a csm command. See 'csm --help'."
   fi
 )
 rm -f /tmp/$1.sh
