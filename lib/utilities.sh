@@ -21,4 +21,4 @@ function h1 {
   echo $1 | sed 's/./=/gi'
   echo ""
 }
-export h1
+export -f h1
