@@ -2,3 +2,5 @@ Opening in existing browser session.
 [1320071:1320071:0100/000000.916825:ERROR:sandbox_linux.cc(374)] InitializeSandbox() called with multiple threads in process gpu-process.
 Opening in existing browser session.
 [1333279:1333279:0100/000000.106476:ERROR:sandbox_linux.cc(374)] InitializeSandbox() called with multiple threads in process gpu-process.
+Opening in existing browser session.
+[1389505:1389505:0100/000000.366851:ERROR:sandbox_linux.cc(374)] InitializeSandbox() called with multiple threads in process gpu-process.

@@ -9,7 +9,7 @@ Chayote Script Manager
 These are common CSM commands used in various situations:
 
 For use on AWS boxes:
-   setup-aws-cdk      Install CDK on an EC2 box.
+   aws-ec2-setup-cdk  Install Cloud Dev Kit on an EC2 box.
 
 For use inside a GIT project:
    git-open           Opens the git project in the defauklt browser
