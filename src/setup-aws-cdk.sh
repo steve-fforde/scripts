@@ -1,23 +1,11 @@
 #!/bin/bash
 
-# curl -s "$CSM_UTILS"
+import heading ask
 
-# source <(curl -s "$CSM_UTILS")
+heading "Setting up AWS Cloud Development Kit"
 
-h1 "Setting up AWS Cloud Development Kit"
-
-#region=$(askWithDefault "Enter your region" "$(curl -s http://169.254.169.254/latest/dynamic/instance-identity/document | python3 -c 'import sys, json; print(json.load(sys.stdin)["region"])')")
-#adfs_host=$(ask "Enter your ADFS Host")
-
-
-while getopts a:b: flag
-do
-    case "${flag}" in
-        a) echo " .... ${OPTARG} ....";;
-        b) echo " ,,,, ${OPTARG} ,,,,";;
-    esac
-done
-
+region=$(ask "Enter your region" --default "$(curl -s http://169.254.169.254/latest/dynamic/instance-identity/document | python3 -c 'import sys, json; print(json.load(sys.stdin)["region"])')")
+adfs_host=$(ask "Enter your ADFS Host")
 
 echo ""
 echo " ++++ $region ++++"
@@ -30,4 +18,3 @@ echo " ++++ $region ++++"
 echo " ~~~~ $@ ~~~~"
 echo " ++++ $region ++++"
 
-echo "x"
