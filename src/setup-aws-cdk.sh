@@ -15,6 +15,7 @@ region=$(ask "Enter your region" --default "$region")
 adfs_host=$(ask "Enter your ADFS Host")
 
 echo ""
+echo " beta version"
 echo " ++++ $region ++++"
 echo " ~~~~ $# ~~~~"
 echo " ++++ $region ++++"
