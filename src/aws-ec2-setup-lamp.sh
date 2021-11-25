@@ -4,6 +4,7 @@ local lineNo=1
 
 function try {
   lineNo=$(( lineNo++ ))
+  echo "\>\> $1"
   bash -c "$1"
   errCode=$?
   if [ $errCode != 0 ]; then
