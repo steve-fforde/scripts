@@ -2,19 +2,7 @@
 
 # help text
 if [ "$1" = "--help" ]; then
-  echo "usage: csm [--help] 
-           <command> [<args>]
-
-Chayote Script Manager
-These are common CSM commands used in various situations:
-
-For use on AWS boxes:
-   aws-ec2-setup-cdk  Install Cloud Dev Kit on an EC2 box.
-
-For use inside a GIT project:
-   git-open           Opens the git project in the defauklt browser
-"
-
+  curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/help.txt" 
   exit 0
 fi
 
