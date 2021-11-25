@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # help text
 if [ "$1" = "--version" ]; then
