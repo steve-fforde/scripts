@@ -1,6 +1,12 @@
 #!/bin/sh
 
 # help text
+if [ "$1" = "--version" ]; then
+  echo "Chayote Script Manager v1.0"
+  exit 0
+fi
+
+# help text
 if [ "$1" = "--help" ]; then
   curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/help.txt" 
   exit 0
