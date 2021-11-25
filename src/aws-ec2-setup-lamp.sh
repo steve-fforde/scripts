@@ -12,10 +12,6 @@ function try {
   fi
 }
 
-try "echo 'hello'"
-try "echo 'hello'"
-try "exit 213"
-
 try "sudo yum update -y"
 try "sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2"
 try "sudo yum install -y httpd mariadb-server"
