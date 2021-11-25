@@ -13,6 +13,8 @@ function try {
   fi
 }
 
+# https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html
+
 try "sudo yum update -y"
 try "sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2"
 try "sudo yum install -y httpd mariadb-server"
