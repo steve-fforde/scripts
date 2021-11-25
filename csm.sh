@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $# != 1 ]; then
+      echo "csm: you must provide a csm command. See 'csm --help'."
+      exit -1
+fi
+
 # version text
 if [ "$1" = "--version" ]; then
   echo "Chayote Script Manager v1.0"
