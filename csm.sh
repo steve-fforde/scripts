@@ -16,8 +16,16 @@ fi
 
 # preview script
 if [ "$1" = "--preview" ]; then
-  curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/src/$2.sh" 
-  echo ""
+    # check if script exists
+    code=$(curl -s -o /dev/null -w "%{http_code}" "https://raw.githubusercontent.com/steve-fforde/scripts/main/src/$2.sh")
+    if (( $code >= 200 && $code < 300 )); then
+      curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/src/$2.sh" 
+      echo ""
+    else
+      # handle script not found
+      echo "csm preview: '$2' is not a csm command. See 'csm --help'."
+      exit -1
+    fi
   exit 0
 fi
 
