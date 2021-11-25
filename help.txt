@@ -1,7 +1,15 @@
 usage: csm [--help] 
+           [--version]
+           [--preview] <command>
            <command> [<args>]
 
 Chayote Script Manager
+
+Options:
+  --help              displays this text.
+  --version           gives the csm version.
+  --preview           previews the script for the specified command
+
 These are common CSM commands used in various situations:
 
 For use on AWS boxes:

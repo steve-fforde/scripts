@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# help text
+# version text
 if [ "$1" = "--version" ]; then
   echo "Chayote Script Manager v1.0"
   echo ""
@@ -13,6 +13,14 @@ if [ "$1" = "--help" ]; then
   echo ""
   exit 0
 fi
+
+# preview script
+if [ "$1" = "--preview" ]; then
+  curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/src/$2.sh" 
+  echo ""
+  exit 0
+fi
+
 
 # switch context to new shell
 (
