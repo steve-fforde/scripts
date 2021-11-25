@@ -24,4 +24,6 @@ try "sudo bash -c 'echo \"<h1>Hello, world</h1>\" > /var/www/index.html'"
 try "sudo usermod -a -G apache $(whoami)"
 try "sudo chown apache:apache /var/www/index.html"
 try "sudo chmod 660 /var/www/index.html"
-try "curl -s http://169.254.169.254/latest/dynamic/instance-identity/document | python3 -c 'import sys, json; print(\"Site available on http://\" + json.load(sys.stdin)[\"privateIp\"])'"
+
+curl -s http://169.254.169.254/latest/dynamic/instance-identity/document | python3 -c 'import sys, json; print("Site available on http://" + json.load(sys.stdin)["privateIp"])'
+echo "Your profile has had the apache group added, but you will need to log off and on for it to take effect."
