@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $# != 1 ]; then
+if [ $# == 0 ]; then
       echo "csm: you must provide a csm command. See 'csm --help'."
       exit -1
 fi

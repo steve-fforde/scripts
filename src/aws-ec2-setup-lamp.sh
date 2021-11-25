@@ -1,6 +1,11 @@
 #!/bin/bash
 
-local lineNo=1
+impoer isAWS
+
+if (( ! isAWS )); then
+    echo "csm aws-ec2-setup-lamp: You must run this script on an AWS EC2 server"
+    exit 3
+fi
 
 function try {
   lineNo=$(( lineNo++ ))
