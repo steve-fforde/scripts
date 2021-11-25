@@ -1,6 +1,6 @@
 #!/bin/bash
 
-impoer isAWS
+import isAWS
 
 if (( ! isAWS )); then
     echo "csm aws-ec2-setup-lamp: You must run this script on an AWS EC2 server"
