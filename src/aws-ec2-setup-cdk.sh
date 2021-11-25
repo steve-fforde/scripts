@@ -1,15 +1,23 @@
 #!/bin/bash
 
-import heading ask
+import ask heading isAWS
 
-heading "Setting up AWS Cloud Development Kit"
+if [ "$1" = "--help" ]; then
+  echo "usage: csm aws-ec2-setup-cdk [--help]
 
-aws=$(nc -v -z -w 3 169.254.169.254 80 2>/dev/null && echo yes || echo no)
+Install Cloud Dev Kit on an EC2 box.
+"
 
-if [ $aws = "no" ]; then
+
+  exit 0
+fi
+
+if (( ! isAWS )); then
     echo "csm aws-ec2-setup-cdk: You must run this script on an AWS EC2 server"
     exit -3
 fi
+
+heading "Setting up AWS Cloud Development Kit"
 
 echo "Loading defaults..."
 
