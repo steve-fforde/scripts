@@ -13,7 +13,6 @@ Options:
 These are common CSM commands used in various situations:
 
 For use on AWS boxes:
-   aws-ec2-setup-cdk  Install Cloud Dev Kit on an EC2 box.
    aws-ec2-setup-lamp Prepare EC2 box as a LAMP (Linux, Apache, MySQL, PHP) 
                       server
 
