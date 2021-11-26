@@ -2,6 +2,8 @@
 
 import isAWS
 
+isAWS
+
 if isAWS; then
   echo "csm aws-ec2-setup-lamp: You must run this script on an AWS EC2 server"
   exit 3
