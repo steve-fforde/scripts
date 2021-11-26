@@ -1,6 +1,10 @@
 #!/bin/bash
 
 function isAWS {
-  #return $(nc -v -z -w 3 169.254.169.254 80 2>/dev/null && echo 1 || echo 0)
-  return 0
+  code=$(curl -s -o /dev/null -w "%{http_code}" 169.254.169.254)
+  if (( $code >= 200 && $code < 300 )); then
+    echo 1
+  else
+    echo 0
+  fi
 }
