@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ 
 import isAWS
 
 if ! isAWS; then
