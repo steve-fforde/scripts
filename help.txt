@@ -18,6 +18,6 @@ For use on AWS boxes:
                       server
 
 For use inside a GIT project:
-   git-open           Opens the git project in the defauklt 
-   git-shove [<memo>] Will, add - commit - push the current poject the memo is
-                      optional. "work in progress" will be used by default
+   git-open           Opens the git project in the default browser.
+   git-shove [<memo>] Optional, Will, add - commit - push the current poject, the
+                      memo "work in progress" will be used by default.
