@@ -1,16 +1,15 @@
-usage: csm [--help] 
-           [--version]
-           [--preview] <command>
-           [--preview-lib] <library>
+usage: csm [-h|--help] [-v|--version]
+           [-p|--preview] <command>
+           [-l|--preview-lib] <library>
            <command> [<args>]
 
 Chayote Script Manager
 
 Options:
-  --help              displays this text.
-  --version           gives the csm version.
-  --preview           previews the script for the specified command.
-  --preview-lib       previews the script for the specified library which may
+  -h, --help          displays this text.
+  -v, --version       gives the csm version.
+  -p, --preview       previews the script for the specified command.
+  -l, --preview-lib   previews the script for the specified library which may
                       be imported by command scripts.
                       
 These are common CSM commands used in various situations:
