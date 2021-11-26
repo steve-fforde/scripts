@@ -1,6 +1,7 @@
 usage: csm [--help] 
            [--version]
            [--preview] <command>
+           [--preview-lib] <library>
            <command> [<args>]
 
 Chayote Script Manager
@@ -8,13 +9,15 @@ Chayote Script Manager
 Options:
   --help              displays this text.
   --version           gives the csm version.
-  --preview           previews the script for the specified command
-
+  --preview           previews the script for the specified command.
+  --preview-lib       previews the script for the specified library which may
+                      be imported by command scripts.
+                      
 These are common CSM commands used in various situations:
 
 For use on AWS boxes:
    aws-ec2-setup-lamp Prepare EC2 box as a LAMP (Linux, Apache, MySQL, PHP) 
-                      server
+                      server.
 
 For use inside a GIT project:
    git-open           Opens the git project in the default browser.
