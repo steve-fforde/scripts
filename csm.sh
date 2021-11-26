@@ -34,6 +34,21 @@ if [ "$1" = "--preview" ]; then
   exit 0
 fi
 
+# preview script
+if [ "$1" = "--preview-lib" ]; then
+    # check if script exists
+    code=$(curl -s -o /dev/null -w "%{http_code}" "https://raw.githubusercontent.com/steve-fforde/scripts/main/lib/$2.sh")
+    if (( $code >= 200 && $code < 300 )); then
+      curl -s "https://raw.githubusercontent.com/steve-fforde/scripts/main/lib/$2.sh" 
+      echo ""
+    else
+      # handle script not found
+      echo "csm preview-lib: '$2' is not a csm library. See 'csm --help'."
+      exit -1
+    fi
+  exit 0
+fi
+
 
 # switch context to new shell
 (
