@@ -20,7 +20,7 @@ if [ "$1" = "--help" ]; then
 fi
 
 # preview script
-if [ "$1" = "--preview" ]; then
+if [ "$1" = "--preview" || "$1" = "-p" ]; then
     # check if script exists
     code=$(curl -s -o /dev/null -w "%{http_code}" "https://raw.githubusercontent.com/steve-fforde/scripts/main/src/$2.sh")
     if (( $code >= 200 && $code < 300 )); then
