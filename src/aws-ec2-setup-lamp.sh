@@ -3,19 +3,17 @@
 import isAWS
 
 if ! isAWS; then
-  echo "csm aws-ec2-setup-lamp: You must run this script on an AWS EC2 server"
+  echo "csm ${CSM_NAME}: You must run this script on an AWS EC2 server"
   exit 3
-else
-  echo "installing lamp"
 fi
 
 function try {
-  lineNo=$(( lineNo++ ))
+  local lineNo=$(( lineNo++ ))
   echo "$lineNo >> $1"
   bash -c "$1"
   errCode=$?
   if [ $errCode != 0 ]; then
-    echo "script error: line ${lineNo}. command '$1' failed with error ${errCode}."
+    echo "csm ${CSM_NAME}: error at line ${lineNo}. command '$1' failed with error ${errCode}."
     exit $errCode
   fi
 }
